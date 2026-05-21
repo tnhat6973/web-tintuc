@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sport | Web Báo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+       
+           <!-- Slideshow container -->
+           <div class="slideshow-container">
+
+  
+            <div class="mySlides my-fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="images/img1.jpg" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+          
+            <div class="mySlides my-fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="images/img2.jpg" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+          
+            <div class="mySlides my-fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="images/img3.jpg" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+          
+          
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+    
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+
+
+          <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+          
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+           
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+
+
+
+
+
+
+
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="news.html">News</a>
+    <a href="sport.html">Sport</a>
+    <a href="thanhtoan.html">Đăng kí thành viên FB88</a>
+</nav>
+    </header>
+
+    <main>
+
+        <div class="banner-gif left">
+            <a href="link-quang-cao-1.html">
+                <img src="images/banner-trai.gif" alt="Quảng cáo trái">
+            </a>
+            <button class="close-btn" onclick="this.parentElement.style.display='none'">×</button>
+        </div>
+
+        <div class="banner-gif right">
+            <a href="link-quang-cao-2.html">
+                <img src="images/banner-phai.gif" alt="Quảng cáo phải">
+            </a>
+            <button class="close-btn" onclick="this.parentElement.style.display='none'">×</button>
+        </div>
+
+
+        <h2>Thể thao</h2>
+        <section class="bbc-grid">
+
+            <!-- TIN LỚN -->
+            <div class="main-news">
+                <img src="images/main3.jpg">
+                <div class="content">
+                    <h3>
+                        "Thằng Tày Ngồi Cạnh Thằng Tây"
+                        "Thằng Tây Bỏ Vợ"
+                        "Thằng Tày Bỏ Cha"
+                    </h3>
+                    <p>Alo Vũ à Vũ...</p>
+                    <div class="quang-cao">
+                        <video controls autoplay muted loop width="100%">
+                            <source src="video/video.mp4">
+                        </video>
+                    </div>
+
+                </div>
+
+                <div class="cot-phai">
+                </div>
+            </div>
+            </div>
+
+
+
+
+            <!-- TIN NHỎ -->
+            <div class="small-news">
+
+                <div class="news-card">
+                    <img src="images/small1.jpg">
+                    <div class="content">
+                        <h4>Ukraine trải qua một đêm yên tĩnh hơn khi Trump nói Putin sẽ không tấn công các thành phố của nước này.</h4>
+                        <p>Nga cho biết tổng thống Mỹ đã yêu cầu tạm dừng các cuộc tấn công vào Kyiv cho đến ngày 1 tháng 2, một động thái mà Trump nói là do thời tiết lạnh giá.</p>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img src="images/small2.jpg">
+                    <div class="content">
+                        <h4>Việt Nam bán những chiếc túi Hermès Birkin của ông trùm để bù đắp thiệt hại do gian lận</h4>
+                        <p>Lan đã cố gắng giữ lại những chiếc túi, nói rằng cô muốn để chúng làm "vật kỷ niệm" cho các con của mình.</p>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img src="images/small3.jpg">
+                    <div class="content">
+                        <h4>Các câu lạc bộ Anh đã trở nên thông minh như thế nào để thống trị Champions League mùa này?</h4>
+                        <p>Các câu lạc bộ Ngoại hạng Anh luôn có tiền, nhưng giờ đây họ cũng có cả bí quyết – đó là lý do họ đã thống trị Champions League mùa này.</p>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img src="images/small4.jpg">
+                    <div class="content">
+                        <h4>Ba lý do khiến giá vàng tăng kỷ lục và một lý do khiến giá vàng giảm</h4>
+                        <p>Giá vàng đã giảm so với mức cao gần đây, nhưng vẫn có một số lý do khiến các nhà đầu tư tìm đến kim loại quý này để trú ẩn.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+               <div class="banner-gif left">...</div>
+    <div class="banner-gif right">...</div>
+
+    <section class="bbc-grid">...</section>
+
+    <div class="container my-5 shadow-sm p-4 bg-white rounded">
+        <h2 class="mb-4">Tin tức bổ sung</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="images/small5.jpg" class="card-img-top" alt="..." style="height: 180px; object-fit: contain;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold text-dark">Hướng dẫn xây dựng trang bị, trang bị và chỉ số cho Warwick trong TFT</h5>
+                        <p class="card-text text-muted">Chúng tôi đề xuất sản xuất Ấn Xạ Thủ, Huyết Kiếm, Quyền Năng Khổng Lồ là đồ chơi tốt nhất cho Warwick trong ĐTCL. Cách chơi phổ biến nhất cho Warwick là Huyết Kiếm, Móng Vuốt Sterak, Quyền Năng Khổng Lồ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="images/small6.jpg" class="card-img-top" alt="..." style="height: 180px; object-fit: contain;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold text-dark">Lối đi, Trang Bị và Số Liệu pháp về Kalista</h5>
+                        <p class="card-text text-muted">Chúng tôi đề xuất sản xuất Cung Xanh, Chùy Đoản Côn, Ngọn Giáo Shojin là lối chơi tốt nhất cho Kalista trong ĐTCL. This cũng là lối chơi phổ biến nhất cho Kalista</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="images/small7.jpg" class="card-img-top" alt="..." style="height: 180px; object-fit: contain;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold text-dark">Hướng dẫn lên đồ, trang bị và chỉ số cho Galio trong TFT</h5>
+                        <p class="card-text text-muted">Chúng tôi đề xuất sản xuất Mũ Thích Nghi, Mũ Thích Nghi, Mũ Thích Nghi là lối chơi tốt nhất cho Galio trong ĐTCL. This cũng là lối chơi phổ biến nhất cho Galio</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="images/small8.jpg" class="card-img-top" alt="..." style="height: 180px; object-fit: contain;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold text-dark">Hướng dẫn lên đồ, trang bị và chỉ số cho Ryze trong TFT</h5>
+                        <p class="card-text text-muted">Chúng tôi đề xuất xuất hiện Mũ Thích Nghi, Quỷ Thư Morello, Trượng Hư Vô là lối chơi tốt nhất cho Ryze trong ĐTCL. Cách chơi phổ biến nhất cho Ryze là Quỷ Thư Morello, Ngọn Giáo Shojin, Trượng Hư Vô</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+</body>
+</html>
